@@ -27,7 +27,9 @@ public class InputAssignment{
       
     suckers = input.nextInt();
       
-    System.out.println("Great, because this place is full of them. \n"
+    System.out.println("Only " + suckers + "? \n"
+                      +"They're going to be so hurt. \n"
+                      +"Well, you need to learn to love them because there's a whole lot of them in there with you. \n"
                       +"Good luck!");
     
   } 
