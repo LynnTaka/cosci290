@@ -18,9 +18,12 @@ public class GameDriver {
                       +"  _/_______  /____  >\\___  >____  /   __/ \\___  >_ \n"
                       +" \\/        \\/     \\/     \\/     \\/|__|        \\/\\/");
   
+     
   String name = "";
+  String cat = "";
   String answer = "";
   int age = 0;
+  String no = "";
   int rollTheDie = (1 + (int)(Math.random() * (6-1)));
     
     Scanner input = new Scanner(System.in);
@@ -47,8 +50,21 @@ public class GameDriver {
                       +"You had so much more to live for, but now you're stuck here. \n"
                       +"With me. \n"
                       +"As your only company. \n"
-                      +"Why don't we play a game.  A game of chance. \n"
-                      +"Roll the dice.");
+                      +"Oh, and this cat too.  \n"
+                      +"What would you like to name them?"); //cat name prompt here
+   
+    cat = input.next();
+    
+    System.out.println(cat +", huh? \n"
+                      +"Adorable. " + name + " and " + cat + "! \n"
+                      +"What a pair you two make. \n"
+                      +"Would you like to play a very special game?");//answer doesnt matter
+    
+    no = input.next();
+    
+    System.out.println("Well, it's not like you had a choice in the matter. \n"
+                      +"We're going to play a game of chance. \n"
+                      +"Here's a die. \n");
  
   
     System.out.println("A " + rollTheDie +"...");
