@@ -71,6 +71,9 @@ public class GameDriver {
   
   if(rollTheDie <=3){
     System.out.println("I'm afraid my friend you've already lost the game.");
+    else if(rollTheDie = 1){
+      System.out.println("The half of a snake eye, I like you already.");
+    }
   }
   else{
     System.out.println("You my friend are already off to a great start.");
