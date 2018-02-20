@@ -14,7 +14,7 @@ int diceRoll = minimum + (int)(Math.random() * maximum); //random generator equa
   
   System.out.println("A " + diceRoll + "...");
     
-if(diceRoll >= 6){
+if(diceRoll >= 7 || diceRoll == 6){
   System.out.println("You my friend are off to a great start");
 }
  else if(diceRoll == 2){
