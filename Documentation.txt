@@ -1,0 +1,19 @@
+Lynn Takahashi
+CoSci 290
+
+Documentation
+
+Items:
+Cat
+Powerade
+Pipe
+Cat Food
+Tuna
+
+
+
+Classes:
+Coward
+Not-So-Much-A-Coward
+Average
+Presentable
