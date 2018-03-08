@@ -17,3 +17,6 @@ Coward
 Not-So-Much-A-Coward
 Average
 Presentable
+Player Character
+cat
+Enemy
