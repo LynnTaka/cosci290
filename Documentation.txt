@@ -5,10 +5,12 @@ Documentation
 
 Items:
 Cat
-Powerade
+Power-7
 Pipe
 Cat Food
 Tuna
+Clowns
+
 
 
 

@@ -1,0 +1,86 @@
+//Lynn Takahashi
+//Cosci 290
+
+//Vocabulary Chapter 6
+
+actual parameter
+-aka an argument
+-the value given to the parameter
+-ex: int z = max(x, y); //a and y are the actual paremeters
+
+ambiguous invocation
+-a compile error
+-caused when there are two or more matches for the invocation
+of a method, but the compiler can't determine which is the best
+match.
+
+argument 
+-aka an actual parameter
+-look above
+
+divide and conquer
+-strategy aka stepwise refinement
+-decompose into manageable subproblems, that can also be  decomposed
+into even more manageable problems.
+
+formal parameter (i.e., parameter)
+-the variables defined in method header
+-a placeholder so when the method is invoked a value is given to
+the parameter
+
+information hiding 225
+-aka encapsulation
+-client can use the method without knowing how it was implemented
+
+method 204
+-consists of a method name, parameter, return value type, and body
+-definition consists of a methof header and method body
+-syntax:modifier returnValueType methodName(list of parameters) {  
+// Method body; 
+}
+
+method abstraction 225
+-achieved by seperating the use of methods from its implementation
+-hides information
+-applied to developing programs
+
+method overloading 219
+-lets you define the methods with the same name as long as their signatures 
+differ
+-java complier determines which method to use based on the method
+signatures
+
+method signature 205
+-the method name and parameter list when put together
+
+modifier 205
+-determines whether other classes can use a field or invoke a method
+
+parameter 205
+-aka formal parameter
+-the variables defined in method header
+-a placeholder so when the method is invoked a value is given to
+the parameter
+
+pass-by-value 212
+-When a method is invoked with an argument, the value of the argument is 
+passed to the parameter
+-if argument is a variable rather than a literal value, the value of the 
+variable is given to the parameter
+
+scope of a variable 
+-The part of a program where the variable can be referenced
+-starts from its declaration, and stops at the end of the block that contains
+the variable
+
+stepwise refinement 
+-aka divide and conquer strategy.
+-decompose into manageable subproblems, that can also be  decomposed
+into even more manageable problems.
+
+stub 
+-a simple, but incomplete version of a methof
+-used when methods are waiting to be implemented
+-used to build a framework for the program
+
+
