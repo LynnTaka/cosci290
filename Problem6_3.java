@@ -36,7 +36,7 @@ public static void main(String[] args){
   number = input.nextInt();  
   
   if(!isPalindrome(number)){
-    System.out.println(number + " isn't a palindrome!");//prob a shorter way to do this but im a noob find out later
+    System.out.println(number + " isn't a palindrome, but this is it reversed " + (reverse(number)) + ".");//prob a shorter way to do this but im a noob find out later
   }
   else{
     System.out.println(number + " is a palindrome.");
@@ -80,5 +80,5 @@ public static void main(String[] args){
  
  //end of reverse
  }
-//end of class
+//end of classa 
 }
