@@ -13,9 +13,6 @@ Monsters
 Boss Monsters
 Humans
 
-
-
-
 Classes:
 Coward
 Character
