@@ -3,22 +3,29 @@ CoSci 290
 
 Documentation
 
-Items:
+Objects Used:
 Cat
 Power-7
 Pipe
 Cat Food
 Tuna
-Clowns
+Monsters
+Boss Monsters
+Humans
 
 
 
 
 Classes:
 Coward
-Not-So-Much-A-Coward
-Average
-Presentable
-Player Character
-cat
+Character
+NPC
 Enemy
+Puzzles
+Inventory
+
+Summary:
+The player wakes up in a dark room, and needs to find their
+way out.  There's a cat.  The player navigates their 
+way through puzzles, and too many monsters.  In the end they 
+may find out their companion isn't who they seem. 
