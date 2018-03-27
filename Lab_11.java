@@ -35,6 +35,9 @@ public static void main(String[] args){
       //makes the r amount of rows
       for(int r = 0; r< n; r++){
         
+        //later want to try math random but didnt work
+        //System.out.print(0 + (int)Math.random() * 1);
+        
         //if-statement to randomly return 1 or 0
         if (Math.random()>=.5){
           System.out.print("1");

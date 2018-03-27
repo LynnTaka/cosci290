@@ -1,0 +1,30 @@
+//Lynn Takahashi
+//CoSci
+
+//Notes
+
+for-loop:
+for (i = initialValue; i < endValue; i++){}
+||
+for (initial-action; loop-continuation-condition; action-after-each-iteration) { 
+// Loop body;  
+Statement(s); 
+}
+
+random number:
+start + (int)(Math.random() * (end-start));
+
+Computes absolute value of a number:
+(Math.abs(200 - n) <= 10));
+
+import java.util.Scanner; 
+Scanner input = new Scanner(System.in);
+
+Built-in String functions
+str.length()
+str.toUpperCase()
+str.toLowerCase()
+str.equalsIgnoreCase
+str.charAt(int index)- get a specific character at an index
+str.substring(int startIndex, int endIndex)-gives a subset string
+based on the given range
