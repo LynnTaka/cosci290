@@ -15,51 +15,55 @@ the resulting summation to another String, which will be formatted and printed a
 //all the necessary stuff to get it running
 import java.util.Scanner;
 public class Midterm{
-public static void main(String[] arg){
-Scanner input = new Scanner(System.in);
+  public static void main(String[] arg){
   
-  System.out.println("Please input a number, it'll be made into a matrix.");
-  
-  int n = input.nextInt();
-  
-  //first matrix
-  String str1 = printMatrix(n);
-  
-  System.out.println(str1);
- 
-  //space btw matrixes
-  System.out.println("");
-  
-  //second matrix
-  String str2 = printMatrix(n); 
-  
-  System.out.println(str2);
-  
-  System.out.println("When added together it makes the matrix.");
-  
-  //Go through each thing and add them together
-  
-  
-  //go through and finds the sum 
-  for(int i=0; i < str1.length(); i++){
-  
-  int Value1 = Integer.parseInt(str1.charAt(i) + "");
+    Scanner input = new Scanner(System.in);
+
+    //ask prompt
+    System.out.println("Please input a number, it'll be made into a matrix.");
+
+    //n is the number inputted
+    int n = input.nextInt();
+
+    //first matrix
+    String str1 = printMatrix(n);
+
+    //Print out first matrix
+    System.out.println(str1);
+
+    //space btw matrixes
+    System.out.println("");
+
+    //second matrix
+    String str2 = printMatrix(n); 
+
+    //print out second matrix
+    System.out.println(str2);
+
+    //the sum
+    System.out.println("When added together it makes the matrix.");
+
+
+
+
+    //go through and finds the sum 
+    for(int i=0; i < str1.length(); i++){
+
+      //first value in the matrix
+      int Value1 = Integer.parseInt(str1.charAt(i) + "");
+      
+      //first value in the second matrix
+      int Value2 = Integer.parseInt(str2.charAt(i) + "");
+
+
+      int sum = Value1 + Value2;
+
+
+      System.out.print(sum + " ");
+
+      }
+
     
-    
-  
-  for(int j=0; j < str2.length(); i++){
-  
-  int Value2 = Integer.parseInt(str2.charAt(i) + "");
-    
- 
-  int sum = Value1 + Value2;
-  
-   
-    System.out.println(sum);
-    
-  }
-  
-  }
   
 
   //end of main method
