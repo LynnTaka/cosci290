@@ -30,14 +30,10 @@ public class Lab_20{
       System.out.print("\n");
     }
     
-    sumOfRows(array);
+    int[] array2 = sumOfRows(array);
     for(int k = 0; k < 5; k++){//rows
-      for(int l = 0; l < 1; l++){//columns
-        System.out.print(array[k][l]);
+        System.out.println(array2[k]);
       }    
-      //new row
-      System.out.print("\n");
-    }
     
   }//end of main
   
@@ -45,7 +41,7 @@ public class Lab_20{
   public static int[] sumOfRows(int[][] sum){
     
     int addThemUp = 0;
-    int[] addition = new int[3];
+    int[] addition = new int[5];
     int index = 0;
     
      for(int i = 0; i < sum.length; i++){
