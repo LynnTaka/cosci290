@@ -49,13 +49,25 @@ public class TicTacToe{
     with updated moves by players.
   */
   public static void printBoard(){
-    System.out.println(board);
+
+    System.out.println("/---|---|---\\");
+    System.out.println("| " + board[0][0] + " | " + board[0][1] + " | " + board[0][2] + " |");
+    System.out.println("|---|---|---|");
+    System.out.println("| " + board[1][0] + " | " + board[1][1] + " | " + board[1][2] + " |");
+    System.out.println("|---|---|---|");
+    System.out.println("| " + board[2][0] + " | " + board[2][1] + " | " + board[2][2] + " |");
+    System.out.println("\\---|---|---/");
  
   }//end of printBoard
   
   public static void changeXO(){
     
-
+    if(xo == 'x'){
+      xo = 'o';
+    }
+    else{
+      xo = 'x';
+    }
     
   }//end of changeXO
   
@@ -67,7 +79,13 @@ public class TicTacToe{
   */
   public static void move(int row, int col){
     
-    
+    if(row>=0 && row<3){
+      if(col>=0 && col<3){
+        if( board[row][col] = xo);
+          return true;
+        }
+      }
+    return false;
     
   }//end of move
   
@@ -76,10 +94,25 @@ public class TicTacToe{
   */
   public static boolean checkWinner(){
     
-
-    
-    return false;
-    
+   for(int i = 0; i<3; i++){
+     if(board[0][i] + board[1][i] + board[2][i] = true){
+       return true;
+     }
+     else if(board[0][0] + board[1][1] + board[2][2] = true){
+       return true;
+     }
+     else if(board[0][2] + board[1][1] + board[2][0] = true){
+       return true;
+     }
+     else if( board[i][0] + board[i][1] + board[i][2] = true){
+       return true;
+     }
+     else{
+       return false;  
+     }
+     
+   }//end of for
+        
   }//end of checkWinner
   
   
