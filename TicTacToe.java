@@ -1,5 +1,5 @@
 /*
-  Author: Lynn
+  Lynn Takahashi
   
   Lab 21: Complete implementation for each function 
     to complete this Tic Tac Toe game!
@@ -49,26 +49,40 @@ public class TicTacToe{
     with updated moves by players.
   */
   public static void printBoard(){
+    
+	    System.out.println("-------------");
 
-    System.out.println("/---|---|---\\");
-    System.out.println("| " + board[0][0] + " | " + board[0][1] + " | " + board[0][2] + " |");
-    System.out.println("|---|---|---|");
-    System.out.println("| " + board[1][0] + " | " + board[1][1] + " | " + board[1][2] + " |");
-    System.out.println("|---|---|---|");
-    System.out.println("| " + board[2][0] + " | " + board[2][1] + " | " + board[2][2] + " |");
-    System.out.println("\\---|---|---/");
+         
+		//rows
+        for (int i = 0; i < 3; i++) {
+
+            System.out.print("| ");
+			
+			//columns
+            for (int j = 0; j < 3; j++) {
+
+                System.out.print(board[i][j] + " | ");
+
+            }
+
+            System.out.println();
+
+            System.out.println("-------------");
+
+        }//end of for
+
+    
  
   }//end of printBoard
   
   public static void changeXO(){
     
-    if(xo == 'x'){
-      xo = 'o';
-    }
+	if(xo == 'x'){
+		xo = 'o';
+	}
     else{
-      xo = 'x';
+		xo = 'x';
     }
-    
   }//end of changeXO
   
   /*
@@ -79,14 +93,30 @@ public class TicTacToe{
   */
   public static void move(int row, int col){
     
-    if(row>=0 && row<3){
-      if(col>=0 && col<3){
-        if( board[row][col] = xo);
-          return true;
-        }
+    if(board[row][col] == 'x'||board[row][col] == 'o'){
+      System.out.println("There is already a marker here, try again.");
+    }
+      else{
+        board[row][col] = xo;
+        changeXO();
       }
-    return false;
     
+    
+	/*
+  
+  check to make sure something is in there
+  
+  if( (row>2 || col>2) || (row<0 || col <0) ){
+         return true;
+	}
+
+		else if(board[row][col]=='x' || board[row][col]=='o'){
+			return true;
+		}
+        return false;
+  
+  */
+
   }//end of move
   
   /*
@@ -94,26 +124,61 @@ public class TicTacToe{
   */
   public static boolean checkWinner(){
     
-   for(int i = 0; i<3; i++){
-     if(board[0][i] + board[1][i] + board[2][i] = true){
-       return true;
-     }
-     else if(board[0][0] + board[1][1] + board[2][2] = true){
-       return true;
-     }
-     else if(board[0][2] + board[1][1] + board[2][0] = true){
-       return true;
-     }
-     else if( board[i][0] + board[i][1] + board[i][2] = true){
-       return true;
-     }
-     else{
-       return false;  
-     }
-     
-   }//end of for
-        
+	//go through all possibilities
+	if(board [0][0]==board[1][0] && board[1][0] == board[2][0] && (board [0][0]=='x' || board [0][0]=='o')){
+      changeXO();
+      printBoard();
+      System.out.println(xo + " is the winner!!!!");          
+      return true;
+  }
+    else if(board [0][1]==board[1][1] && board[1][1] == board[2][1] && (board [0][1]=='x' || board [0][1]=='o')){
+      changeXO();
+      printBoard();
+      System.out.println(xo + " is the winner!!!!");          
+      return true;
+    }
+    else if(board [0][2]==board[1][2] && board[1][2] == board[2][2] && (board [0][2]=='x' || board [0][2]=='o')){
+      changeXO();
+      printBoard();
+      System.out.println(xo + " is the winner!!!!");          
+      return true;
+    }
+    else if(board [0][0]==board[0][1] && board[0][1] == board[0][2] && (board [0][0]=='x' || board [0][0]=='o')){
+      changeXO();
+      printBoard();
+      System.out.println(xo + " is the winner!!!!");          
+      return true;
+    }
+    else if(board [1][0]==board[1][1] && board[1][1] == board[1][2] && (board [1][0]=='x' || board [1][0]=='o')){
+      changeXO();
+      printBoard();
+      System.out.println(xo + " is the winner!!!!");          
+      return true;
+    }
+    else if(board [2][0]==board[2][1] && board[2][1] == board[2][2] && (board [2][0]=='x' || board [2][0]=='o')){
+      changeXO();
+      printBoard();
+      System.out.println(xo + " is the winner!!!!");          
+      return true;
+    }
+    else if(board [0][0]==board[1][1] && board[1][1] == board[2][2] && (board [0][0]=='x' || board [0][0]=='o')){
+      changeXO();
+      printBoard();
+      System.out.println(xo + " is the winner!!!!");          
+      return true;
+    }
+    else if(board [2][0]==board[1][1] && board[1][1] == board[0][2] && (board [2][0]=='x' || board [2][0]=='o')){
+      changeXO();
+      printBoard();
+      System.out.println(xo + " is the winner!!!!");          
+      return true;
+    }
+    else
+      return false;
+
+    
   }//end of checkWinner
   
   
 }//end class
+
