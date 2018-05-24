@@ -34,8 +34,16 @@ public class TicTacToe{
       printBoard();
       System.out.println("It is " + xo + "'s turn. Please enter 0, 1, 2 for row");
       row = input.nextInt();
+      while(row>2 || row<0){
+        System.out.println("Please input a valid number");
+        row = input.nextInt();
+      }
       System.out.println("Please enter 0, 1, 2 for col");
       col = input.nextInt();
+      while(col>2 || col<0){
+        System.out.println("Please input a valid number");
+        col = input.nextInt();
+      }
       move(row, col);
       if(checkWinner()){
         gameOver = true;
@@ -102,20 +110,6 @@ public class TicTacToe{
       }
     
     
-	/*
-  
-  check to make sure something is in there
-  
-  if( (row>2 || col>2) || (row<0 || col <0) ){
-         return true;
-	}
-
-		else if(board[row][col]=='x' || board[row][col]=='o'){
-			return true;
-		}
-        return false;
-  
-  */
 
   }//end of move
   
@@ -167,13 +161,34 @@ public class TicTacToe{
       System.out.println(xo + " is the winner!!!!");          
       return true;
     }
-    else if(board [2][0]==board[1][1] && board[1][1] == board[0][2] && (board [2][0]=='x' || board [2][0]=='o')){
+    else{
+      if(board [2][0]==board[1][1] && board[1][1] == board[0][2] && (board [2][0]=='x' || board [2][0]=='o')){
       changeXO();
       printBoard();
       System.out.println(xo + " is the winner!!!!");          
       return true;
+      }
     }
-    else
+    
+    int counter = 0;
+    for(int i=0; i<3; i++){
+      for(int j = 0; j<3; j++){ 
+        if(board[i][j] != ' '){
+         counter ++;
+          if(counter>8){
+          printBoard();
+          System.out.println("There are no winners this game is a draw!");
+          return true;         
+      }
+          
+      
+        }
+         
+      }
+        
+    }
+    
+    
       return false;
 
     
