@@ -8,7 +8,7 @@
 
 import java.util.*;
 
-public class connect4{
+public class Connect4_2{
   
   //declare 2d array to hold X's and O's to represent board
   static int w = 6;
@@ -32,22 +32,11 @@ public class connect4{
     //while there isn't a winner
     while(!gameOver){
       printBoard();
-      System.out.println("It is " + xo + "'s turn. Please enter 0, 1, 2, 3, 4, 5 for row");
-      row = input.nextInt();
-      while(row>6 || row<0){
-          System.out.println("Please input a valid number");
-          row = input.nextInt();
-        }//end of while
-      
-      System.out.println("Please enter 0, 1, 2, 3, 4, 5 for col");
-      col = input.nextInt();
-      while(col>6 || col<0){
-        System.out.println("Please input a valid number");
-        col = input.nextInt();
-      }
-      move(row, col);
+      System.out.println("It is " + xo + "'s turn. Please enter 0, 1, 2, 3, 4, 5 the column");
+      move(col);
       if(checkWinner()){
         gameOver = true;
+        break;
       }
     }
     
@@ -74,7 +63,7 @@ public class connect4{
 
             System.out.println();
 
-            System.out.println("-------------------");
+            System.out.println("--------------------------");
 
         }//end of for
 
@@ -98,33 +87,46 @@ public class connect4{
     Then change xo.
     Else prompt the user to try again because there's already an x or o here.
   */
-  public static void move(int row, int col){
+  public static void move(int col){
     
-    boolean valid = true;
+    Scanner input = new Scanner(System.in);
+    
+    //counter
     int count=1;
     
-    while(!valid){
-      System.out.println("Please input a valid move");
-        move(row,col);
-    }
+    col = input.nextInt();
     
-    while(valid){
-    if(board[bottom][col] == ' '){
-        board[bottom][col] = xo;
-        break;//break loop
-      }
-      count +=1;
-      if(count==6){
-        System.out.println("This is not valid, please try again");
-        valid = false;
+    
+    while(!gameOver){
+      if(col>5 || col<0){
+        System.out.println("Please input a valid number");
+        break;
+      }//end of if
+      
+      else if(board[bottom][col] == '.'){//if blank 
+          board[bottom][col] = xo; //place an x or o
+          changeXO();
+          break;//break loop
+        }
+        else if(board[bottom][col] == 'x' || board[bottom][col]== 'o'){
+          count += 1;
+          if(board[bottom - count][col] == '.'){//if it's blank
+            board[bottom - count][col] = xo; //place x or o
+            changeXO();
+           //break loop
+          }
+        }
+        if(count == 6){
+          System.out.println("This is not valid, please try again");
           break;
-      }
-      else{
-        board[row][col] = xo;
-        changeXO();
-      }
-    }//end og while
- 
+        }
+        else{
+          board[bottom][col] = xo;
+          changeXO();
+          break;
+        }
+      }//end og while
+
 
   }//end of move
 
